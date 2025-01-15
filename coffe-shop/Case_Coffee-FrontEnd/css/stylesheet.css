@@ -1,0 +1,406 @@
+/* Menentukan tinggi header sebagai 145 piksel. */
+:root {
+  --header-height: 145px;
+
+  /* color */
+  --green-color: #0f8b8d;
+  --yellow-color: #ec9a29;
+  --red-color: #a8201a;
+  --old-green: #143642;
+  --white-color: #f9fbfe;
+
+  /* Font & Typography*/
+  --main-font: "Lato", sans-serif;
+  --section-title-size: 40px;
+  --desc-section-size: 18px;
+
+  --menu-name-size: 20px;
+  --menu-price-size: 18px;
+
+  /* Font Weight/ketebalan font */
+  --font-bold: 900;
+  --font-medium: 800;
+  --font-regular: 400;
+}
+/* Dengan menggunakan variabel-variabel ini,perubahan tersebut akan diterapkan ke seluruh stylesheet di mana pun variabel ini digunakan. */
+
+/* Reset HTML */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--main-font);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding-top: 100px;
+}
+
+.container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* *********************************** */
+/* BAGIAN HELP PAGE */
+/* *********************************** */
+.section-help-page {
+  padding: 120px 0;
+}
+
+.help {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.help-title h2 {
+  font-size: 48px;
+  font-weight: 900;
+  color: #0f8b8d;
+  margin-bottom: 50px;
+}
+
+.help-form {
+  display: grid;
+  grid-template-columns: 203px 1fr;
+  align-items: center;
+  column-gap: 34px;
+  row-gap: 20px;
+  width: 100%;
+  height: 784px;
+  border: 2px solid #d2d2d2;
+  border-radius: 20px;
+  padding: 50px 98px;
+}
+
+label {
+  grid-column: 1 / 2;
+  font-size: 30px;
+  font-weight: 700;
+  color: #143642;
+}
+
+input,
+textarea {
+  grid-column: 2 / 3;
+  padding: 21px 46px;
+  font-size: 24px;
+  font-family: inherit;
+  border: 2px solid #d2d2d2;
+  color: #d2d2d2;
+  border-radius: 20px;
+}
+
+textarea {
+  margin-top: 25px;
+}
+
+button {
+  width: 216px;
+  height: 70px;
+  grid-column: 2 / 3;
+  font-size: 24px;
+  color: #f9fbfe;
+  border: none;
+  background-color: #a8201a;
+  border-radius: 150px;
+  margin-top: 50px;
+}
+
+/* Reusable CSS */
+.section__title {
+  display: inline-block;
+  font-size: var(--section-title-size);
+  color: var(--green-color);
+  padding-bottom: 20px;
+  border-bottom: 4px solid var(--yellow-color);
+  margin-bottom: 20px;
+}
+
+.section__border {
+  box-sizing: border-box;
+}
+
+.section__desc {
+  font-size: var(--desc-section-size);
+  color: var(--old-green);
+  line-height: 135%;
+  margin-bottom: 40px;
+}
+
+.section__desc_max {
+  max-width: 430px;
+}
+
+.button {
+  padding: 20px 50px;
+  border-radius: 50px;
+  color: var(--white-color);
+  background-color: var(--red-color);
+}
+
+#header-bg {
+  background-color: var(--green-color);
+}
+
+/* === HOME PAGE === */
+/* header */
+.header {
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+}
+
+.header__logo img {
+  width: 300px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.nav__link {
+  font-size: 20px;
+  color: var(--white-color);
+}
+
+/* hero - Home*/
+.hero {
+  text-align: center;
+  padding: 240px 0;
+  background-image: linear-gradient(
+      rgba(20, 54, 66, 0.7),
+      rgba(20, 54, 66, 0.7)
+    ),
+    url("../assets/Coffe Header.png");
+  margin-top: -145px;
+}
+
+.hero__title {
+  font-size: 60px;
+  color: var(--white-color);
+  margin-bottom: 10px;
+}
+
+.hero__desc {
+  font-size: 28px;
+  color: var(--white-color);
+}
+
+/* who are - Home*/
+.who__are__container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.who__are__img {
+  width: 335px;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.who__are__container-right {
+  width: 40%;
+}
+
+/* Product Showcase - Home */
+.product__showcase__container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+.product__showcase__img {
+  width: 335px;
+  height: 335px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Hangout - Home */
+.hangout__container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hangout__img {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+/* Find Us - Home */
+.findus__container,
+.ask__container {
+  text-align: center;
+}
+
+.findus__title,
+.ask__title {
+  border-bottom: none;
+}
+
+.section__title span {
+  color: var(--yellow-color);
+  border-bottom: 2px solid var(--yellow-color);
+}
+
+.findus__imgs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* Ask - Home */
+.ask__title {
+  padding-bottom: 0px;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 100px;
+  padding: 80px 0;
+  background-color: var(--old-green);
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  width: 335px;
+  margin-bottom: 30px;
+}
+
+.footer__contact {
+  display: flex;
+  gap: 20px;
+}
+
+.footer__email,
+.footer__telf {
+  filter: invert(1);
+}
+
+.footer__email {
+  width: 40px;
+}
+
+.footer__telf {
+  width: 36px;
+}
+
+.footer__title {
+  color: var(--yellow-color);
+  margin-bottom: 20px;
+}
+
+.footer__link {
+  color: var(--white-color);
+}
+
+.footer__links li:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.subfooter {
+  display: none;
+}
+
+/* == MENU PAGE === */
+.menu__container {
+  text-align: center;
+}
+
+.section__title-no-underline {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.menu__imgs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.menu__card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 20px 0;
+  border-radius: 20px;
+  background-image: url("../assets/Coffee background.png");
+  background-size: cover;
+  transition: 0.4s;
+}
+
+.menu__card:hover {
+  transform: scale(1.1);
+}
+
+.menu__card:hover > .menu__text {
+  transform: translateY(350%);
+}
+
+.menu__text {
+  transition: 0.4s;
+}
+
+.menu__text-name,
+.menu__text-price {
+  color: var(--white-color);
+}
+
+.menu__text-name {
+  font-size: var(--menu-name-size);
+  margin-bottom: 10px;
+}
+
+.menu__text-price {
+  font-size: var(--menu-price-size);
+}
+
+.menu__img {
+  width: 270px;
+  transition: 0.4s;
+}
+
+.menu__card:hover > .menu__img {
+  transform: translateY(-30%);
+}
